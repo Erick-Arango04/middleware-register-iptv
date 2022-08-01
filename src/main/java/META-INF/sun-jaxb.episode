@@ -5,7 +5,7 @@
 Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
 Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2022.07.28 a las 05:21:50 PM CDT 
+Generado el: 2022.08.01 a las 11:25:34 AM CDT 
 
   -->
   <bindings xmlns:tns="http://bean.tpsms.tp.com.mx/" if-exists="true" scd="x-schema::tns">
@@ -18,14 +18,14 @@ Generado el: 2022.07.28 a las 05:21:50 PM CDT
     <bindings if-exists="true" scd="~tns:getCatalogBundlesResponse">
       <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesResponse"/>
     </bindings>
-    <bindings if-exists="true" scd="~tns:validateESNResponse">
-      <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateESNResponse"/>
+    <bindings if-exists="true" scd="~tns:getCatalogRegionsResponse">
+      <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogRegionsResponse"/>
     </bindings>
     <bindings if-exists="true" scd="~tns:validateESN">
       <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateESN"/>
     </bindings>
-    <bindings if-exists="true" scd="~tns:getCatalogRegionsResponse">
-      <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogRegionsResponse"/>
+    <bindings if-exists="true" scd="~tns:validateESNResponse">
+      <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateESNResponse"/>
     </bindings>
     <bindings if-exists="true" scd="~tns:getCatalogBundlesNetflixResponse">
       <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesNetflixResponse"/>
@@ -63,11 +63,11 @@ Generado el: 2022.07.28 a las 05:21:50 PM CDT
     <bindings if-exists="true" scd="~tns:getBundleInfo">
       <class ref="com.totalplay.mx.consultsipts.wsdl.GetBundleInfo"/>
     </bindings>
-    <bindings if-exists="true" scd="~tns:getSubscribersByProviderResponse">
-      <class ref="com.totalplay.mx.consultsipts.wsdl.GetSubscribersByProviderResponse"/>
-    </bindings>
     <bindings if-exists="true" scd="~tns:getBundleBySuscriptor">
       <class ref="com.totalplay.mx.consultsipts.wsdl.GetBundleBySuscriptor"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:getSubscribersByProviderResponse">
+      <class ref="com.totalplay.mx.consultsipts.wsdl.GetSubscribersByProviderResponse"/>
     </bindings>
     <bindings if-exists="true" scd="~tns:getCatalogTerminals">
       <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogTerminals"/>
@@ -150,11 +150,11 @@ Generado el: 2022.07.28 a las 05:21:50 PM CDT
     <bindings if-exists="true" scd="~tns:providersVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.ProvidersVO"/>
     </bindings>
-    <bindings if-exists="true" scd="~tns:channelVO">
-      <class ref="com.totalplay.mx.consultsipts.wsdl.ChannelVO"/>
-    </bindings>
     <bindings if-exists="true" scd="~tns:catTerminalsVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.CatTerminalsVO"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:channelVO">
+      <class ref="com.totalplay.mx.consultsipts.wsdl.ChannelVO"/>
     </bindings>
     <bindings if-exists="true" scd="~tns:resultVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.ResultVO"/>
@@ -183,11 +183,11 @@ Generado el: 2022.07.28 a las 05:21:50 PM CDT
     <bindings if-exists="true" scd="~tns:suscriptorNtflx">
       <class ref="com.totalplay.mx.consultsipts.wsdl.SuscriptorNtflx"/>
     </bindings>
-    <bindings if-exists="true" scd="~tns:responseMailVO">
-      <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseMailVO"/>
-    </bindings>
     <bindings if-exists="true" scd="~tns:terminalVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.TerminalVO"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:responseMailVO">
+      <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseMailVO"/>
     </bindings>
     <bindings if-exists="true" scd="~tns:bundlesVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.BundlesVO"/>
@@ -195,11 +195,11 @@ Generado el: 2022.07.28 a las 05:21:50 PM CDT
     <bindings if-exists="true" scd="~tns:responseSubscribersByProviderVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseSubscribersByProviderVO"/>
     </bindings>
-    <bindings if-exists="true" scd="~tns:catBundleNtflxVO">
-      <class ref="com.totalplay.mx.consultsipts.wsdl.CatBundleNtflxVO"/>
-    </bindings>
     <bindings if-exists="true" scd="~tns:suscriptorBlimVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.SuscriptorBlimVO"/>
+    </bindings>
+    <bindings if-exists="true" scd="~tns:catBundleNtflxVO">
+      <class ref="com.totalplay.mx.consultsipts.wsdl.CatBundleNtflxVO"/>
     </bindings>
     <bindings if-exists="true" scd="~tns:catCirclesVO">
       <class ref="com.totalplay.mx.consultsipts.wsdl.CatCirclesVO"/>

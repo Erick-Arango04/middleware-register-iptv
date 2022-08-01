@@ -12,6 +12,7 @@ import com.totalplay.mx.consultsipts.wsdl.BundleNtflxVO;
 import com.totalplay.mx.consultsipts.wsdl.BundlesVO;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesAmzn;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesNetflix;
+import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetSusccriptor;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapServiceGetBundleBySuscriptor;
 
 @RestController
@@ -27,27 +28,31 @@ public class SoapController {
 	@Autowired
 	private SoapGetCatalogBundlesAmzn soapGetCatalogBundlesAmzn;
 	
+	@Autowired
+	private SoapGetSusccriptor soapGetSusccriptor;
 	
-
+	
+	
 	@PostMapping("/getBundleBySuscriptor")
 	public List<BundlesVO> getBundleBySuscriptor() {
-
 		return soapServiceGetBundleBySuscriptor.getBundles();
-
 	}
 
+	
 	@PostMapping("/getCatalogBundlesAmzn")
 	public List<BundleNtflxVO> getCatalogBundlesAmzn() {
-
 		return soapGetCatalogBundlesAmzn.getBundlesAmzn();
-
 	}
 
+	
 	@PostMapping("/getCatalogBundlesNetflix")
 	public List<BundleNtflxVO> getCatalogBundlesNetflix() {
-
 		return soapGetCatalogBundlesNetflix.getBundlesNetflix();
-
+	}
+	
+	@PostMapping("/getSuscriptor")
+	public Object getSuscriptor() {
+		return soapGetSusccriptor.getBundlesSuscriptor();
 	}
 
 }
