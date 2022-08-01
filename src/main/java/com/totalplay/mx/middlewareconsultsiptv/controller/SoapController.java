@@ -43,35 +43,35 @@ public class SoapController {
 	
 	@PostMapping("/getBundleBySuscriptor")
 	public List<BundlesVO> getBundleBySuscriptor() {
-		return soapServiceGetBundleBySuscriptor.getBundles();
+		return soapServiceGetBundleBySuscriptor.getResponse();
 	}
 
 	
 	@PostMapping("/getCatalogBundlesAmzn")
 	public List<BundleNtflxVO> getCatalogBundlesAmzn() {
-		return soapGetCatalogBundlesAmzn.getBundlesAmzn();
+		return soapGetCatalogBundlesAmzn.getResponse();
 	}
 
 	
 	@PostMapping("/getCatalogBundlesNetflix")
 	public List<BundleNtflxVO> getCatalogBundlesNetflix() {
-		return soapGetCatalogBundlesNetflix.getBundlesNetflix();
+		return soapGetCatalogBundlesNetflix.getResponse();
 	}
 	
 	@PostMapping("/getSuscriptor")
 	public Object getSuscriptor() {
-		return soapGetSusccriptor.getBundlesSuscriptor();
+		return soapGetSusccriptor.getResponse();
 	}
 	
 	
 	@PostMapping("/getSuscriptorAmzn")
 	public String getSuscriptorAmzn() {
-	   return  soapGetSuscriptorAmzn.getResponseSuscriptorAmzn();
+	   return  soapGetSuscriptorAmzn.getResponse();
 	}
 	
 	@PostMapping("/getSuscriptorNtflx")
 	public String getSuscriptorNtflx() {
-	   return  soapGetSuscriptorNtflx.getResponseSuscriptorNtflx();
+	   return  soapGetSuscriptorNtflx.getResponse();
 	}
 	
 

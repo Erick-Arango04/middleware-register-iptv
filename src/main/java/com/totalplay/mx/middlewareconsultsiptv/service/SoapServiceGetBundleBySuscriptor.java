@@ -14,14 +14,15 @@ import com.totalplay.mx.consultsipts.wsdl.UserVO;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
 
 @Service
-public class SoapServiceGetBundleBySuscriptor {
+public class SoapServiceGetBundleBySuscriptor implements GetConsultResponse {
 
 	@Autowired
 	private SoapClient soapClient;
 
 	ObjectFactory objectFactory = new ObjectFactory();
 
-	public List<BundlesVO> getBundles() {
+	@Override
+	public List<BundlesVO> getResponse() {
 
 		UserVO userVo = new UserVO();
 		userVo.setIp("10.216.8.40");

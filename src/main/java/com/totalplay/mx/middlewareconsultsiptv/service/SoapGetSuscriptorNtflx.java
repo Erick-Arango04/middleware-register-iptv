@@ -12,33 +12,31 @@ import com.totalplay.mx.consultsipts.wsdl.UserVO;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
 
 @Service
-public class SoapGetSuscriptorNtflx {
+public class SoapGetSuscriptorNtflx implements GetConsultResponse {
 
 	@Autowired
 	private SoapClient soapClient;
 
 	ObjectFactory objectFactory = new ObjectFactory();
-	
-	public String getResponseSuscriptorNtflx(){
-		
+
+	@Override
+	public String getResponse() {
+
 		UserVO userVo = new UserVO();
 		userVo.setIp("10.216.8.40");
 		userVo.setUser("IU400476");
 		userVo.setPassword("IU400476TP2013");
 
 		GetSuscriptorNtflx getSuscriptorNtflx = new GetSuscriptorNtflx();
-		
+
 		getSuscriptorNtflx.setArg0(userVo);
 		getSuscriptorNtflx.setArg1("0102482373");
-		
-		GetSuscriptorNtflxResponse response = (GetSuscriptorNtflxResponse) 
-				soapClient.getResponse(objectFactory.createGetSuscriptorNtflx(getSuscriptorNtflx));
-		
+
+		GetSuscriptorNtflxResponse response = (GetSuscriptorNtflxResponse) soapClient
+				.getResponse(objectFactory
+						.createGetSuscriptorNtflx(getSuscriptorNtflx));
+
 		return response.getReturn().getMessage();
-		
-		
 	}
 
-	
-	
 }

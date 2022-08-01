@@ -14,15 +14,16 @@ import com.totalplay.mx.consultsipts.wsdl.UserVO;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
 
 @Service
-public class SoapGetSusccriptor {
-	
+public class SoapGetSusccriptor implements GetConsultResponse {
+
 	@Autowired
 	private SoapClient soapClient;
 
 	ObjectFactory objectFactory = new ObjectFactory();
-	
-	public Object getBundlesSuscriptor(){
-		
+
+	@Override
+	public Object getResponse() {
+
 		UserVO userVo = new UserVO();
 		userVo.setIp("10.216.8.40");
 		userVo.setUser("IU400476");
@@ -31,16 +32,15 @@ public class SoapGetSusccriptor {
 		SearchVO searchVo = new SearchVO();
 
 		searchVo.setContract("0100043710");
-		
-		
+
 		GetSuscriptor getSuscriptor = new GetSuscriptor();
-		
+
 		getSuscriptor.setArg0(userVo);
 		getSuscriptor.setArg1(searchVo);
-		
-		GetSuscriptorResponse response = (GetSuscriptorResponse)soapClient.getResponse(objectFactory.createGetSuscriptor(getSuscriptor));
-		
-		 
+
+		GetSuscriptorResponse response = (GetSuscriptorResponse) soapClient
+				.getResponse(objectFactory.createGetSuscriptor(getSuscriptor));
+
 		return response.getReturn().getSuscriptorVO();
 	}
 
