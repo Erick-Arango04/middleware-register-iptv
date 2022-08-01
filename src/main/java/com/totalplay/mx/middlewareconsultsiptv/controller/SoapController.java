@@ -14,6 +14,7 @@ import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesAmzn
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesNetflix;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetSusccriptor;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetSuscriptorAmzn;
+import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetSuscriptorNtflx;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapServiceGetBundleBySuscriptor;
 
 @RestController
@@ -34,6 +35,9 @@ public class SoapController {
 	
 	@Autowired
 	private SoapGetSuscriptorAmzn soapGetSuscriptorAmzn;
+	
+	@Autowired
+	private SoapGetSuscriptorNtflx soapGetSuscriptorNtflx;
 	
 	
 	
@@ -65,6 +69,10 @@ public class SoapController {
 	   return  soapGetSuscriptorAmzn.getResponseSuscriptorAmzn();
 	}
 	
+	@PostMapping("/getSuscriptorNtflx")
+	public String getSuscriptorNtflx() {
+	   return  soapGetSuscriptorNtflx.getResponseSuscriptorNtflx();
+	}
 	
 
 }
