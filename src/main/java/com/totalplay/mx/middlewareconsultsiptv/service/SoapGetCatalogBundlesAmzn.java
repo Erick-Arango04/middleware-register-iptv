@@ -12,14 +12,14 @@ import com.totalplay.mx.consultsipts.wsdl.ObjectFactory;
 import com.totalplay.mx.middlewareconsultsiptv.cliente.SoapClient;
 
 @Service
-public class SoapGetCatalogBundlesAmzn implements GetConsultResponse {
+public class SoapGetCatalogBundlesAmzn {
 
 	@Autowired
 	private SoapClient soapClient;
 
 	ObjectFactory objectFactory = new ObjectFactory();
 
-	@Override
+	
 	public List<BundleNtflxVO> getResponse() {
 
 		GetCatalogBundlesAmzn getCatalogAmzn = new GetCatalogBundlesAmzn();
@@ -31,5 +31,7 @@ public class SoapGetCatalogBundlesAmzn implements GetConsultResponse {
 		List<BundleNtflxVO> bundlesListAmzn = response.getReturn().getBundles();
 		return bundlesListAmzn;
 	}
+
+	
 
 }

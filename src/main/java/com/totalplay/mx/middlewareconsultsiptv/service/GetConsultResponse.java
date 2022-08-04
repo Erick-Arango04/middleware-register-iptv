@@ -2,6 +2,8 @@ package com.totalplay.mx.middlewareconsultsiptv.service;
 
 public interface GetConsultResponse {
 	
-	public Object getResponse();
+	public Object getResponse(String input);
+	
+	
 
 }

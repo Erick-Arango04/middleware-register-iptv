@@ -3,15 +3,19 @@ package com.totalplay.mx.middlewareconsultsiptv.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.totalplay.mx.consultsipts.wsdl.BundleNtflxVO;
 import com.totalplay.mx.consultsipts.wsdl.BundlesVO;
+import com.totalplay.mx.consultsipts.wsdl.SuscriptorAmznVO;
+import com.totalplay.mx.consultsipts.wsdl.SuscriptorNtflx;
+import com.totalplay.mx.middlewareconsultsiptv.modelRequest.AccountModelRequest;
+import com.totalplay.mx.middlewareconsultsiptv.modelRequest.GetModelRequest;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesAmzn;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetCatalogBundlesNetflix;
+import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetModelSTB;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetSusccriptor;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetSuscriptorAmzn;
 import com.totalplay.mx.middlewareconsultsiptv.service.SoapGetSuscriptorNtflx;
@@ -39,11 +43,14 @@ public class SoapController {
 	@Autowired
 	private SoapGetSuscriptorNtflx soapGetSuscriptorNtflx;
 	
+	@Autowired
+	private SoapGetModelSTB soapGetModelSTB;
+	
 	
 	
 	@PostMapping("/getBundleBySuscriptor")
-	public List<BundlesVO> getBundleBySuscriptor() {
-		return soapServiceGetBundleBySuscriptor.getResponse();
+	public List<BundlesVO> getBundleBySuscriptor(@RequestBody AccountModelRequest accountModelRequest) {
+		return soapServiceGetBundleBySuscriptor.getResponse(accountModelRequest.getAccount());
 	}
 
 	
@@ -59,20 +66,24 @@ public class SoapController {
 	}
 	
 	@PostMapping("/getSuscriptor")
-	public Object getSuscriptor() {
-		return soapGetSusccriptor.getResponse();
+	public Object getSuscriptor(@RequestBody AccountModelRequest accountModelRequest) {
+		return soapGetSusccriptor.getResponse(accountModelRequest.getAccount());
 	}
 	
 	
 	@PostMapping("/getSuscriptorAmzn")
-	public String getSuscriptorAmzn() {
-	   return  soapGetSuscriptorAmzn.getResponse();
+	public SuscriptorAmznVO getSuscriptorAmzn(@RequestBody AccountModelRequest accountModelRequest) {
+	   return  soapGetSuscriptorAmzn.getResponse(accountModelRequest.getAccount());
 	}
 	
 	@PostMapping("/getSuscriptorNtflx")
-	public String getSuscriptorNtflx() {
-	   return  soapGetSuscriptorNtflx.getResponse();
+	public SuscriptorNtflx getSuscriptorNtflx(@RequestBody AccountModelRequest accountModelRequest ) {
+	   return  soapGetSuscriptorNtflx.getResponse(accountModelRequest.getAccount());
 	}
 	
+	@PostMapping("/getModelSTB")
+	public String getModelSTB(@RequestBody GetModelRequest getModelRequest) {
+	  return  soapGetModelSTB.getResponse(getModelRequest.getStb());
+	}
 
 }
