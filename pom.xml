@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.totalplay.mx</groupId>
-	<artifactId>middleware-consults-iptv</artifactId>
+	<artifactId>middleware-registeriptv-iptv</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>middleware-consults-iptv</name>
+	<name>middleware-registeriptv-iptv</name>
 	<description>Consult iptv</description>
 	<properties>
 		<java.version>1.8</java.version>
@@ -80,11 +80,11 @@
                 </executions>
                 <configuration>
                     <schemaLanguage>WSDL</schemaLanguage>
-                    <generatePackage>com.totalplay.mx.consultsipts.wsdl</generatePackage>
+                    <generatePackage>com.totalplay.mx.registeriptv.wsdl</generatePackage>
                     <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
                     <schemas>
                         <schema>
-                            <url>http://10.213.8.246/Consults/ConsultsService?wsdl</url>
+                            <url>http://10.213.8.246/Register/RegisterService?wsdl</url>
                         </schema>
                     </schemas>
                 </configuration>

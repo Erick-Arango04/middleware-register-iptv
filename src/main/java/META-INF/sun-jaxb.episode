@@ -6,7 +6,7 @@
 Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
 Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2022.08.04 a las 06:09:42 PM CDT 
+Generado el: 2022.08.10 a las 03:17:11 PM CDT 
 
   -->
       
@@ -14,421 +14,211 @@ Generado el: 2022.08.04 a las 06:09:42 PM CDT
             
         <schemaBindings map="false">
                   
-            <package name="com.totalplay.mx.consultsipts.wsdl"/>
+            <package name="com.totalplay.mx.registeriptv.wsdl"/>
                 
         </schemaBindings>
             
-        <bindings if-exists="true" scd="~tns:getBundleBySuscriptorResponse">
+        <bindings if-exists="true" scd="~tns:registerSuscriptorResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetBundleBySuscriptorResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterSuscriptorResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogBundlesResponse">
+        <bindings if-exists="true" scd="~tns:registerSuscriptor">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterSuscriptor"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:validateESNResponse">
+        <bindings if-exists="true" scd="~tns:registerCircleResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateESNResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterCircleResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:validateESN">
+        <bindings if-exists="true" scd="~tns:registerAddonProvider">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateESN"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterAddonProvider"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogRegionsResponse">
+        <bindings if-exists="true" scd="~tns:registerSuscriberDoblePlay">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogRegionsResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterSuscriberDoblePlay"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogBundlesNetflixResponse">
+        <bindings if-exists="true" scd="~tns:registerProfileResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesNetflixResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterProfileResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getBundleInfoResponse">
+        <bindings if-exists="true" scd="~tns:registerBundle">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetBundleInfoResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterBundle"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSuscriptorAmzn">
+        <bindings if-exists="true" scd="~tns:registerAddonProviderResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorAmzn"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterAddonProviderResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getAddonByBundleAmzo">
+        <bindings if-exists="true" scd="~tns:registerBundleProviderResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetAddonByBundleAmzo"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterBundleProviderResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogBundlesNetflix">
+        <bindings if-exists="true" scd="~tns:registerDeviceXMPPResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesNetflix"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterDeviceXMPPResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogCircles">
+        <bindings if-exists="true" scd="~tns:registerDevice">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogCircles"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterDevice"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogRegions">
+        <bindings if-exists="true" scd="~tns:registerProfile">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogRegions"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterProfile"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSuscriptorAmznResponse">
+        <bindings if-exists="true" scd="~tns:registerBundleOpenResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorAmznResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterBundleOpenResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getAddonByBundleAmzoResponse">
+        <bindings if-exists="true" scd="~tns:registerBundleProvider">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetAddonByBundleAmzoResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterBundleProvider"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSuscriptorBlim">
+        <bindings if-exists="true" scd="~tns:registerDeviceResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorBlim"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterDeviceResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSuscriptor">
+        <bindings if-exists="true" scd="~tns:generateCodeResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptor"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.GenerateCodeResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getBundleInfo">
+        <bindings if-exists="true" scd="~tns:registerBundleResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetBundleInfo"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterBundleResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSubscribersByProviderResponse">
+        <bindings if-exists="true" scd="~tns:registerBundleOpen">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSubscribersByProviderResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterBundleOpen"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getBundleBySuscriptor">
+        <bindings if-exists="true" scd="~tns:registerDeviceOTT">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetBundleBySuscriptor"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterDeviceOTT"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:validateServiceUser">
+        <bindings if-exists="true" scd="~tns:registerDeviceXMPP">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateServiceUser"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterDeviceXMPP"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getChannelsByProviderSuscriptorsResponse">
+        <bindings if-exists="true" scd="~tns:registerDeviceOTTResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetChannelsByProviderSuscriptorsResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterDeviceOTTResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogTerminals">
+        <bindings if-exists="true" scd="~tns:generateCode">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogTerminals"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.GenerateCode"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogProviders">
+        <bindings if-exists="true" scd="~tns:registerCircle">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogProviders"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterCircle"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSubscribersByProvider">
+        <bindings if-exists="true" scd="~tns:registerSuscriberDoblePlayResponse">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSubscribersByProvider"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.RegisterSuscriberDoblePlayResponse"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getCatalogTerminalsResponse">
+        <bindings if-exists="true" scd="~tns:GenerateCodeException">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogTerminalsResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.GenerateCodeException"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getSuscriptorResponse">
+        <bindings if-exists="true" scd="~tns:bundleVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorResponse"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.BundleVO"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:getChannelsByProviderSuscriptors">
+        <bindings if-exists="true" scd="~tns:promoVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetChannelsByProviderSuscriptors"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getSuscriptorBlimResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorBlimResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getCircle">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCircle"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:sendMailSuscriptor">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.SendMailSuscriptor"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getSuscriptorNtflxResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorNtflxResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getCatalogCirclesResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogCirclesResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getCatalogBundlesAmzn">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesAmzn"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getCatalogProvidersResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogProvidersResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getSuscriptorNtflx">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetSuscriptorNtflx"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getCatalogBundles">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundles"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getCircleResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCircleResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:sendMailSuscriptorResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.SendMailSuscriptorResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:validateServiceUserResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ValidateServiceUserResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:getCatalogBundlesAmznResponse">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.GetCatalogBundlesAmznResponse"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:suscriptorAmznVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.SuscriptorAmznVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:catProvidersVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CatProvidersVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:providerVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ProviderVO"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.PromoVO"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="~tns:userVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.UserVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:responseProviderVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseProviderVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:providersVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ProvidersVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:catTerminalsVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CatTerminalsVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:channelVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ChannelVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:resultVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ResultVO"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.UserVO"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="~tns:deviceVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.DeviceVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:catBundlesVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CatBundlesVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:catRegionsVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CatRegionsVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:circleVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CircleVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:searchVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.SearchVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:bundleNtflxVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.BundleNtflxVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:methodVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.MethodVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:suscriptorNtflx">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.SuscriptorNtflx"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:terminalVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.TerminalVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:responseMailVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseMailVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:bundlesVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.BundlesVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:responseSubscribersByProviderVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseSubscribersByProviderVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:suscriptorBlimVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.SuscriptorBlimVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:catBundleNtflxVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CatBundleNtflxVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:catCirclesVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.CatCirclesVO"/>
-                
-        </bindings>
-            
-        <bindings if-exists="true" scd="~tns:regionVO">
-                  
-            <class ref="com.totalplay.mx.consultsipts.wsdl.RegionVO"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.DeviceVO"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="~tns:responseVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseVO"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.ResponseVO"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:bundleInfoVO">
+        <bindings if-exists="true" scd="~tns:deviceOttVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.BundleInfoVO"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.DeviceOttVO"/>
                 
         </bindings>
             
         <bindings if-exists="true" scd="~tns:suscriptorVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.SuscriptorVO"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.SuscriptorVO"/>
                 
         </bindings>
             
-        <bindings if-exists="true" scd="~tns:responseUpdatePlanChangeVO">
+        <bindings if-exists="true" scd="~tns:susbcriptionVO">
                   
-            <class ref="com.totalplay.mx.consultsipts.wsdl.ResponseUpdatePlanChangeVO"/>
+            <class ref="com.totalplay.mx.registeriptv.wsdl.SusbcriptionVO"/>
+                
+        </bindings>
+            
+        <bindings if-exists="true" scd="~tns:profileVO">
+                  
+            <class ref="com.totalplay.mx.registeriptv.wsdl.ProfileVO"/>
                 
         </bindings>
           
