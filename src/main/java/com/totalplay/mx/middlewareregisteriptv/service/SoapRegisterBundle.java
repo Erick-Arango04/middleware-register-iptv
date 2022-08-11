@@ -39,8 +39,6 @@ public class SoapRegisterBundle implements GetRegisterResponse {
         registerBundle.setArg1("0103529247");
         registerBundle.setArg2(bundleVO);
         
-        System.out.println("hola23");
-        
         RegisterBundleResponse response = (RegisterBundleResponse) soapClient
         .getResponse(objectFactory.createRegisterBundle(registerBundle)); 
        
