@@ -65,33 +65,7 @@
 						</exclude>
 					</excludes>
 				</configuration>
-			</plugin>
-			
-			<plugin>
-                <groupId>org.jvnet.jaxb2.maven2</groupId>
-                <artifactId>maven-jaxb2-plugin</artifactId>
-                <version>0.14.0</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <schemaLanguage>WSDL</schemaLanguage>
-                    <generatePackage>com.totalplay.mx.registeriptv.wsdl</generatePackage>
-                    <generateDirectory>${project.basedir}/src/main/java</generateDirectory>
-                    <schemas>
-                        <schema>
-                            <url>http://10.213.8.246/Register/RegisterService?wsdl</url>
-                        </schema>
-                    </schemas>
-                </configuration>
-            </plugin>
-			
-			
-			
+			</plugin>	
 		</plugins>
 	</build>
 

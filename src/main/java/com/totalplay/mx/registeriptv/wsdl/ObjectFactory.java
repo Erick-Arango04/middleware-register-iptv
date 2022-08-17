@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.0 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2022.08.17 a las 01:32:12 PM CDT 
+// Generado el: 2022.08.17 a las 04:12:55 PM CDT 
 //
 
 
@@ -39,17 +39,17 @@ public class ObjectFactory {
     private final static QName _RegisterSuscriberDoblePlay_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerSuscriberDoblePlay");
     private final static QName _RegisterBundle_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerBundle");
     private final static QName _RegisterAddonProviderResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerAddonProviderResponse");
-    private final static QName _RegisterBundleProviderResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerBundleProviderResponse");
     private final static QName _RegisterDeviceXMPPResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerDeviceXMPPResponse");
-    private final static QName _RegisterProfile_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerProfile");
+    private final static QName _RegisterBundleProviderResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerBundleProviderResponse");
     private final static QName _RegisterDevice_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerDevice");
+    private final static QName _RegisterProfile_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerProfile");
     private final static QName _RegisterBundleProvider_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerBundleProvider");
     private final static QName _RegisterBundleOpenResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerBundleOpenResponse");
     private final static QName _RegisterDeviceResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerDeviceResponse");
     private final static QName _GenerateCodeResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "generateCodeResponse");
     private final static QName _RegisterBundleResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerBundleResponse");
-    private final static QName _RegisterDeviceOTT_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerDeviceOTT");
     private final static QName _RegisterBundleOpen_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerBundleOpen");
+    private final static QName _RegisterDeviceOTT_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerDeviceOTT");
     private final static QName _RegisterDeviceXMPP_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerDeviceXMPP");
     private final static QName _GenerateCode_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "generateCode");
     private final static QName _RegisterDeviceOTTResponse_QNAME = new QName("http://bean.tpsms.tp.com.mx/", "registerDeviceOTTResponse");
@@ -129,14 +129,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterBundleProviderResponse }
-     * 
-     */
-    public RegisterBundleProviderResponse createRegisterBundleProviderResponse() {
-        return new RegisterBundleProviderResponse();
-    }
-
-    /**
      * Create an instance of {@link RegisterDeviceXMPPResponse }
      * 
      */
@@ -145,11 +137,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterProfile }
+     * Create an instance of {@link RegisterBundleProviderResponse }
      * 
      */
-    public RegisterProfile createRegisterProfile() {
-        return new RegisterProfile();
+    public RegisterBundleProviderResponse createRegisterBundleProviderResponse() {
+        return new RegisterBundleProviderResponse();
     }
 
     /**
@@ -158,6 +150,14 @@ public class ObjectFactory {
      */
     public RegisterDevice createRegisterDevice() {
         return new RegisterDevice();
+    }
+
+    /**
+     * Create an instance of {@link RegisterProfile }
+     * 
+     */
+    public RegisterProfile createRegisterProfile() {
+        return new RegisterProfile();
     }
 
     /**
@@ -201,19 +201,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link RegisterDeviceOTT }
-     * 
-     */
-    public RegisterDeviceOTT createRegisterDeviceOTT() {
-        return new RegisterDeviceOTT();
-    }
-
-    /**
      * Create an instance of {@link RegisterBundleOpen }
      * 
      */
     public RegisterBundleOpen createRegisterBundleOpen() {
         return new RegisterBundleOpen();
+    }
+
+    /**
+     * Create an instance of {@link RegisterDeviceOTT }
+     * 
+     */
+    public RegisterDeviceOTT createRegisterDeviceOTT() {
+        return new RegisterDeviceOTT();
     }
 
     /**
@@ -441,19 +441,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterBundleProviderResponse }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RegisterBundleProviderResponse }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerBundleProviderResponse")
-    public JAXBElement<RegisterBundleProviderResponse> createRegisterBundleProviderResponse(RegisterBundleProviderResponse value) {
-        return new JAXBElement<RegisterBundleProviderResponse>(_RegisterBundleProviderResponse_QNAME, RegisterBundleProviderResponse.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RegisterDeviceXMPPResponse }{@code >}
      * 
      * @param value
@@ -467,16 +454,16 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterProfile }{@code >}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterBundleProviderResponse }{@code >}
      * 
      * @param value
      *     Java instance representing xml element's value.
      * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RegisterProfile }{@code >}
+     *     the new instance of {@link JAXBElement }{@code <}{@link RegisterBundleProviderResponse }{@code >}
      */
-    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerProfile")
-    public JAXBElement<RegisterProfile> createRegisterProfile(RegisterProfile value) {
-        return new JAXBElement<RegisterProfile>(_RegisterProfile_QNAME, RegisterProfile.class, null, value);
+    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerBundleProviderResponse")
+    public JAXBElement<RegisterBundleProviderResponse> createRegisterBundleProviderResponse(RegisterBundleProviderResponse value) {
+        return new JAXBElement<RegisterBundleProviderResponse>(_RegisterBundleProviderResponse_QNAME, RegisterBundleProviderResponse.class, null, value);
     }
 
     /**
@@ -490,6 +477,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerDevice")
     public JAXBElement<RegisterDevice> createRegisterDevice(RegisterDevice value) {
         return new JAXBElement<RegisterDevice>(_RegisterDevice_QNAME, RegisterDevice.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterProfile }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link RegisterProfile }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerProfile")
+    public JAXBElement<RegisterProfile> createRegisterProfile(RegisterProfile value) {
+        return new JAXBElement<RegisterProfile>(_RegisterProfile_QNAME, RegisterProfile.class, null, value);
     }
 
     /**
@@ -558,19 +558,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterDeviceOTT }{@code >}
-     * 
-     * @param value
-     *     Java instance representing xml element's value.
-     * @return
-     *     the new instance of {@link JAXBElement }{@code <}{@link RegisterDeviceOTT }{@code >}
-     */
-    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerDeviceOTT")
-    public JAXBElement<RegisterDeviceOTT> createRegisterDeviceOTT(RegisterDeviceOTT value) {
-        return new JAXBElement<RegisterDeviceOTT>(_RegisterDeviceOTT_QNAME, RegisterDeviceOTT.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RegisterBundleOpen }{@code >}
      * 
      * @param value
@@ -581,6 +568,19 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerBundleOpen")
     public JAXBElement<RegisterBundleOpen> createRegisterBundleOpen(RegisterBundleOpen value) {
         return new JAXBElement<RegisterBundleOpen>(_RegisterBundleOpen_QNAME, RegisterBundleOpen.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RegisterDeviceOTT }{@code >}
+     * 
+     * @param value
+     *     Java instance representing xml element's value.
+     * @return
+     *     the new instance of {@link JAXBElement }{@code <}{@link RegisterDeviceOTT }{@code >}
+     */
+    @XmlElementDecl(namespace = "http://bean.tpsms.tp.com.mx/", name = "registerDeviceOTT")
+    public JAXBElement<RegisterDeviceOTT> createRegisterDeviceOTT(RegisterDeviceOTT value) {
+        return new JAXBElement<RegisterDeviceOTT>(_RegisterDeviceOTT_QNAME, RegisterDeviceOTT.class, null, value);
     }
 
     /**
