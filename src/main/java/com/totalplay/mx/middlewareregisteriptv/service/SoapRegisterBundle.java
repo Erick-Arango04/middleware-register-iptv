@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.totalplay.mx.middlewareregisteriptv.cliente.SoapClient;
+import com.totalplay.mx.middlewareregisteriptv.config.SoapLoginApp;
 import com.totalplay.mx.registeriptv.wsdl.BundleVO;
 import com.totalplay.mx.registeriptv.wsdl.ObjectFactory;
 import com.totalplay.mx.registeriptv.wsdl.RegisterBundle;
@@ -18,6 +19,8 @@ public class SoapRegisterBundle{
 
 	@Autowired
 	private SoapClient soapClient;
+    @Autowired
+    private SoapLoginApp soapLoginApp;
 
 	ObjectFactory objectFactory = new ObjectFactory();
 
@@ -25,9 +28,9 @@ public class SoapRegisterBundle{
     public ResponseVO getResponse() {
 
 		UserVO userVo = new UserVO();
-		userVo.setIp("10.216.8.40");
-		userVo.setUser("IU400476");
-		userVo.setPassword("IU400476TP2013");
+		userVo.setIp(soapLoginApp.getIp());
+		userVo.setUser(soapLoginApp.getUser());
+		userVo.setPassword(soapLoginApp.getPassword());
 
         BundleVO bundleVO = new BundleVO();
 

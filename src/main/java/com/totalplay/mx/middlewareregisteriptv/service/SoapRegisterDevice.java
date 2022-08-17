@@ -1,9 +1,11 @@
 package com.totalplay.mx.middlewareregisteriptv.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Service;
 
 import com.totalplay.mx.middlewareregisteriptv.cliente.SoapClient;
+import com.totalplay.mx.middlewareregisteriptv.config.SoapLoginApp;
 import com.totalplay.mx.middlewareregisteriptv.modelRequest.RegisterDeviceRequest;
 import com.totalplay.mx.registeriptv.wsdl.DeviceVO;
 import com.totalplay.mx.registeriptv.wsdl.ObjectFactory;
@@ -19,6 +21,8 @@ public class SoapRegisterDevice {
 
 	@Autowired
 	private SoapClient soapClient;
+    @Autowired
+    private SoapLoginApp soapLoginApp;
 
 	ObjectFactory objectFactory = new ObjectFactory();
 
@@ -26,25 +30,23 @@ public class SoapRegisterDevice {
     public ResponseVO getResponse(RegisterDeviceRequest registerDeviceRequest) {
        
         UserVO userVo = new UserVO();
-		userVo.setIp("10.216.8.40");
-		userVo.setUser("IU400476");
-		userVo.setPassword("IU400476TP2013");
+		userVo.setIp(soapLoginApp.getIp());
+		userVo.setUser(soapLoginApp.getUser());
+		userVo.setPassword(soapLoginApp.getPassword());
 
         DeviceVO deviceVO = new DeviceVO();
-        deviceVO.setAlias("");
-        deviceVO.setEsn("");
-        deviceVO.setIsDemo("");
-        deviceVO.setIsInternal("");
-        deviceVO.setIsTest("");
-        deviceVO.setMac("");
+        deviceVO.setAlias(registerDeviceRequest.getAlias());
+        deviceVO.setEsn(registerDeviceRequest.getEsn());
+        deviceVO.setIsDemo(registerDeviceRequest.getIsDemo());
+        deviceVO.setIsInternal(registerDeviceRequest.getIsInternal());
+        deviceVO.setIsTest(registerDeviceRequest.getIsTest());
+        deviceVO.setMac(registerDeviceRequest.getMac());
      
         RegisterDevice registerDevice = new RegisterDevice();
 
         registerDevice.setArg0(userVo);
         registerDevice.setArg1("");
         registerDevice.setArg2(deviceVO);
-
-
 
         RegisterDeviceResponse response = (RegisterDeviceResponse) soapClient
         .getResponse(objectFactory.createRegisterDevice(registerDevice)); 
