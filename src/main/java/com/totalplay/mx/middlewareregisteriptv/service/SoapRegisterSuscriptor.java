@@ -4,14 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.totalplay.mx.middlewareregisteriptv.cliente.SoapClient;
+import com.totalplay.mx.middlewareregisteriptv.modelRequest.RegisterDoblePlayRequest;
 import com.totalplay.mx.registeriptv.wsdl.ObjectFactory;
 import com.totalplay.mx.registeriptv.wsdl.RegisterSuscriptor;
 import com.totalplay.mx.registeriptv.wsdl.RegisterSuscriptorResponse;
+import com.totalplay.mx.registeriptv.wsdl.ResponseVO;
 import com.totalplay.mx.registeriptv.wsdl.SuscriptorVO;
 import com.totalplay.mx.registeriptv.wsdl.UserVO;
 
 @Service
-public class SoapRegisterSuscriptor implements GetRegisterResponse {
+public class SoapRegisterSuscriptor implements GetRegisterSuscriptorResponse {
 
 	@Autowired
 	private SoapClient soapClient;
@@ -19,7 +21,7 @@ public class SoapRegisterSuscriptor implements GetRegisterResponse {
 	ObjectFactory objectFactory = new ObjectFactory();
 
     @Override
-    public Object getResponse() {
+    public ResponseVO getResponse(RegisterDoblePlayRequest registerDoblePlayRequest) {
      
         UserVO userVo = new UserVO();
 		userVo.setIp("10.216.8.40");

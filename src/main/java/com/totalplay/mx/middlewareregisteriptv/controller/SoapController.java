@@ -2,14 +2,18 @@ package com.totalplay.mx.middlewareregisteriptv.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.totalplay.mx.middlewareregisteriptv.modelRequest.RegisterDeviceRequest;
+import com.totalplay.mx.middlewareregisteriptv.modelRequest.RegisterDoblePlayRequest;
 import com.totalplay.mx.middlewareregisteriptv.service.SoapRegisterBundle;
 import com.totalplay.mx.middlewareregisteriptv.service.SoapRegisterDevice;
 import com.totalplay.mx.middlewareregisteriptv.service.SoapRegisterSuscriberDoblePlay;
 import com.totalplay.mx.middlewareregisteriptv.service.SoapRegisterSuscriptor;
-import org.springframework.web.bind.annotation.RequestBody;
+import com.totalplay.mx.registeriptv.wsdl.ResponseVO;
+
 
 
 
@@ -30,24 +34,43 @@ public class SoapController {
 	private SoapRegisterDevice soapRegisterDevice;
 	
 	@PostMapping("/registerBundle")
-	public Object registerBundle() {
+	public ResponseVO registerBundle() {
 	 	return soapRegisterBundle.getResponse();
 	}
 
-
 	@PostMapping("/registerSuscriptor")
-	public Object registerSuscriptor () {
-		return soapRegisterSuscriptor.getResponse();
+	public Object registerSuscriptor (@RequestBody RegisterDoblePlayRequest registerDoblePlayRequest) {
+		return soapRegisterSuscriptor.getResponse(registerDoblePlayRequest);
 	}
 	
 	@PostMapping("/registerSuscriberDoblePlay")
-	public Object registerSuscriberDoblePlay() {
-		return soapRegisterSuscriberDoblePlay.getResponse();
+	public ResponseVO registerSuscriberDoblePlay(@RequestBody RegisterDoblePlayRequest registerDoblePlayRequest) {
+		return soapRegisterSuscriberDoblePlay.getResponse(registerDoblePlayRequest);
 	}
 	
 	@PostMapping("/registerDevice")
-	public Object registerDevice() {
-		return soapRegisterDevice.getResponse();
+	public ResponseVO registerDevice(@RequestBody RegisterDeviceRequest registerDeviceRequest) {
+		return soapRegisterDevice.getResponse(registerDeviceRequest);
+	}
+
+	
+	/*
+	 * 	@PostMapping("/registerBundleProvider")
+	public SomeEnityData registerBundleProvider() {
+		
+		
+		return entity;
 	}
 	
+	@PostMapping("/registerAddonProvider")
+	public SomeEnityData registerBundleProvider() {
+		
+		
+		return entity;
+	}
+	 * 
+	 */
+
+	
 }
+

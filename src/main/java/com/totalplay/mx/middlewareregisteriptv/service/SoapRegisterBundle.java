@@ -8,20 +8,21 @@ import com.totalplay.mx.registeriptv.wsdl.BundleVO;
 import com.totalplay.mx.registeriptv.wsdl.ObjectFactory;
 import com.totalplay.mx.registeriptv.wsdl.RegisterBundle;
 import com.totalplay.mx.registeriptv.wsdl.RegisterBundleResponse;
+import com.totalplay.mx.registeriptv.wsdl.ResponseVO;
 import com.totalplay.mx.registeriptv.wsdl.UserVO;
 
 
 
 @Service
-public class SoapRegisterBundle implements GetRegisterResponse {
+public class SoapRegisterBundle{
 
 	@Autowired
 	private SoapClient soapClient;
 
 	ObjectFactory objectFactory = new ObjectFactory();
 
-    @Override
-    public Object getResponse() {
+    
+    public ResponseVO getResponse() {
 
 		UserVO userVo = new UserVO();
 		userVo.setIp("10.216.8.40");

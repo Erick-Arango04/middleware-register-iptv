@@ -4,15 +4,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.totalplay.mx.middlewareregisteriptv.cliente.SoapClient;
+import com.totalplay.mx.middlewareregisteriptv.modelRequest.RegisterDoblePlayRequest;
 import com.totalplay.mx.registeriptv.wsdl.ObjectFactory;
 import com.totalplay.mx.registeriptv.wsdl.RegisterSuscriberDoblePlay;
 import com.totalplay.mx.registeriptv.wsdl.RegisterSuscriberDoblePlayResponse;
+import com.totalplay.mx.registeriptv.wsdl.ResponseVO;
 import com.totalplay.mx.registeriptv.wsdl.SuscriptorVO;
 import com.totalplay.mx.registeriptv.wsdl.UserVO;
 
 
 @Service
-public class SoapRegisterSuscriberDoblePlay implements GetRegisterResponse {
+public class SoapRegisterSuscriberDoblePlay implements GetRegisterSuscriptorResponse {
 
 	@Autowired
 	private SoapClient soapClient;
@@ -20,25 +22,24 @@ public class SoapRegisterSuscriberDoblePlay implements GetRegisterResponse {
 	ObjectFactory objectFactory = new ObjectFactory();
 
     @Override
-    public Object getResponse() {
-       
+    public ResponseVO getResponse( RegisterDoblePlayRequest request ) {
+
         UserVO userVo = new UserVO();
 		userVo.setIp("10.216.8.40");
 		userVo.setUser("IU400476");
 		userVo.setPassword("IU400476TP2013");
 
         SuscriptorVO  suscriptorVO = new SuscriptorVO();
-
-        suscriptorVO.setContract("0106617251");
-        suscriptorVO.setEmail("mail@mail.com");
-        suscriptorVO.setFirstName("Pedro");
-        suscriptorVO.setIdTypeContract(50);
-        suscriptorVO.setLastName("Arango");
-        suscriptorVO.setLatitude("-654685489584684694");
-        suscriptorVO.setLongitude("654654654654654645");
-        suscriptorVO.setRegionId(9);
-        suscriptorVO.setSusStyId(1);
-        suscriptorVO.setZipCode("15000");
+        suscriptorVO.setContract(request.getContract());
+        suscriptorVO.setEmail(request.getEmail());
+        suscriptorVO.setFirstName(request.getFirstName());
+        suscriptorVO.setIdTypeContract(request.getIdTypeContract());
+        suscriptorVO.setLastName(request.getLastName());
+        suscriptorVO.setLatitude(request.getLatitude());
+        suscriptorVO.setLongitude(request.getLongitude());
+        suscriptorVO.setRegionId(request.getRegionId());
+        suscriptorVO.setSusStyId(request.getSus_sty_id());
+        suscriptorVO.setZipCode(request.getZipCode());
 
 
         RegisterSuscriberDoblePlay registerSuscriberDoblePlay = new RegisterSuscriberDoblePlay();
@@ -54,3 +55,10 @@ public class SoapRegisterSuscriberDoblePlay implements GetRegisterResponse {
     }
 
 }
+
+
+
+       
+ 
+
+
