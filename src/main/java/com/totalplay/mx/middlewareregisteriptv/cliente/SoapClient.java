@@ -8,9 +8,10 @@ public class SoapClient extends WebServiceGatewaySupport {
 
 	public Object getResponse(Object request) {
 
+	    
 		JAXBElement res = (JAXBElement) getWebServiceTemplate()
 				.marshalSendAndReceive(
-						"http://10.213.8.246/Register/RegisterService", request);
+						"http://10.213.12.163:9901/Register/RegisterService", request);
 		return res.getValue();
 
 	}

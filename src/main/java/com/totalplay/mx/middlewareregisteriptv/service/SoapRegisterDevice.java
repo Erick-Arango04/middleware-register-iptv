@@ -37,15 +37,13 @@ public class SoapRegisterDevice {
         DeviceVO deviceVO = new DeviceVO();
         deviceVO.setAlias(registerDeviceRequest.getAlias());
         deviceVO.setEsn(registerDeviceRequest.getEsn());
-        deviceVO.setIsDemo(registerDeviceRequest.getIsDemo());
-        deviceVO.setIsInternal(registerDeviceRequest.getIsInternal());
-        deviceVO.setIsTest(registerDeviceRequest.getIsTest());
         deviceVO.setMac(registerDeviceRequest.getMac());
-     
+        deviceVO.setUserAgent(registerDeviceRequest.getUserAgent());
+       
         RegisterDevice registerDevice = new RegisterDevice();
 
         registerDevice.setArg0(userVo);
-        registerDevice.setArg1("");
+        registerDevice.setArg1(registerDeviceRequest.getAccount());
         registerDevice.setArg2(deviceVO);
 
         RegisterDeviceResponse response = (RegisterDeviceResponse) soapClient

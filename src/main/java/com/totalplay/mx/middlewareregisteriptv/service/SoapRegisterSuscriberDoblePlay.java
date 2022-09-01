@@ -36,19 +36,22 @@ public class SoapRegisterSuscriberDoblePlay implements GetRegisterSuscriptorResp
         suscriptorVO.setContract(request.getContract());
         suscriptorVO.setEmail(request.getEmail());
         suscriptorVO.setFirstName(request.getFirstName());
-        suscriptorVO.setIdTypeContract(request.getIdTypeContract());
+        suscriptorVO.setIdTypeContract(Integer.valueOf(request.getIdTypeContract()) );
         suscriptorVO.setLastName(request.getLastName());
         suscriptorVO.setLatitude(request.getLatitude());
         suscriptorVO.setLongitude(request.getLongitude());
-        suscriptorVO.setRegionId(request.getRegionId());
-        suscriptorVO.setSusStyId(request.getSus_sty_id());
+        suscriptorVO.setName(request.getName());
+        suscriptorVO.setRegionId(Integer.valueOf(request.getRegionId()));
+        suscriptorVO.setSusStyId(Integer.valueOf(request.getSus_sty_id()));
         suscriptorVO.setZipCode(request.getZipCode());
+        suscriptorVO.setZone(request.getZone());
 
 
         RegisterSuscriberDoblePlay registerSuscriberDoblePlay = new RegisterSuscriberDoblePlay();
 
         registerSuscriberDoblePlay.setArg0(userVo);
         registerSuscriberDoblePlay.setArg1(suscriptorVO);
+        registerSuscriberDoblePlay.setArg2("");
         registerSuscriberDoblePlay.setArg3("0");
 
         RegisterSuscriberDoblePlayResponse response = (RegisterSuscriberDoblePlayResponse) soapClient

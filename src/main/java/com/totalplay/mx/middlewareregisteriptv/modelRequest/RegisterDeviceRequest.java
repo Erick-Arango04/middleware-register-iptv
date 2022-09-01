@@ -11,11 +11,18 @@ import lombok.Setter;
 @NoArgsConstructor
 public class RegisterDeviceRequest {
 
-private String alias;
-private String esn;
-private String isDemo;
-private String isInternal;
-private String isTest;
-private String mac;
+    private String alias;
+    private String account;
+    private String esn;
+    private String mac; // siempre minusculas
+    private String userAgent; //modelostb
+
+    public RegisterDeviceRequest(String alias, String esn, String mac, String userAgent) {
+        this.alias = alias;
+        this.esn = esn;
+        this.mac = mac;
+        this.userAgent = userAgent;
+        this.account = null;
+    }
     
 }

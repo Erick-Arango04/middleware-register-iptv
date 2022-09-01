@@ -24,7 +24,7 @@ public class SoapRegisterSuscriptor implements GetRegisterSuscriptorResponse {
 	ObjectFactory objectFactory = new ObjectFactory();
 
     @Override
-    public ResponseVO getResponse(RegisterDoblePlayRequest registerDoblePlayRequest) {
+    public ResponseVO getResponse(RegisterDoblePlayRequest request) {
      
         UserVO userVo = new UserVO();
 		userVo.setIp(soapLoginApp.getIp());
@@ -33,29 +33,31 @@ public class SoapRegisterSuscriptor implements GetRegisterSuscriptorResponse {
 
         SuscriptorVO  suscriptorVO = new SuscriptorVO();
 
-        suscriptorVO.setContract("0106617251");
-        suscriptorVO.setEmail("mail@mail.com");
-        suscriptorVO.setFirstName("Pedro");
-        suscriptorVO.setIdTypeContract(50);
-        suscriptorVO.setLastName("Arango");
-        suscriptorVO.setLatitude("-654685489584684694");
-        suscriptorVO.setLongitude("654654654654654645");
-        suscriptorVO.setRegionId(9);
-        suscriptorVO.setSusStyId(1);
-        suscriptorVO.setZipCode("15000");
-        
-
+        suscriptorVO.setContract(request.getContract());
+        suscriptorVO.setEmail(request.getEmail());
+        suscriptorVO.setName(request.getName());
+        suscriptorVO.setFirstName(request.getFirstName());
+        suscriptorVO.setIdTypeContract(Integer.valueOf(request.getIdTypeContract()));
+        suscriptorVO.setLastName(request.getLastName());
+        suscriptorVO.setLatitude(request.getLatitude());
+        suscriptorVO.setLongitude(request.getLongitude());
+        suscriptorVO.setRegionId(Integer.valueOf(request.getRegionId()));
+        suscriptorVO.setSusStyId(Integer.valueOf(request.getSus_sty_id()));
+        suscriptorVO.setZipCode(request.getZipCode());
+        suscriptorVO.setZone(request.getZone());
 
         RegisterSuscriptor registerSuscriptor = new RegisterSuscriptor();
        
         registerSuscriptor.setArg0(userVo);
         registerSuscriptor.setArg1(suscriptorVO);
+        registerSuscriptor.setArg2("");
         registerSuscriptor.setArg3("0");
 
         RegisterSuscriptorResponse response = (RegisterSuscriptorResponse) soapClient
         .getResponse(objectFactory.createRegisterSuscriptor(registerSuscriptor)); 
        
-		return response.getReturn();
+		 
+           return  response.getReturn();
     }
     
 }

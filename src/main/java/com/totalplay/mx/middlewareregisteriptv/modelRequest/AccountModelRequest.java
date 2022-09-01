@@ -1,7 +1,10 @@
 package com.totalplay.mx.middlewareregisteriptv.modelRequest;
 
+import javax.validation.constraints.NotBlank;
+
 public class AccountModelRequest {
 	
+	@NotBlank
 	private String account;
 
 	public AccountModelRequest(){}
