@@ -35,7 +35,7 @@ public class SoapRegisterBundle{
 
         BundleVO bundleVO = new BundleVO();
 
-        bundleVO.setCharge(Boolean.parseBoolean(registerBundle2.getCharge()) );
+        bundleVO.setCharge(false);
         bundleVO.setExpiration(registerBundle2.getExpiration());
         bundleVO.setIdCco(Integer.parseInt("1450"));
         bundleVO.setSession(registerBundle2.getSession());

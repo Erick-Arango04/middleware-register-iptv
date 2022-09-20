@@ -15,7 +15,6 @@ public class RegisterBundleRequest {
 
     @NotBlank 
     private String  account;
-    private String   charge;
     private String   expiration;
     private String  session;
     @NotBlank 
