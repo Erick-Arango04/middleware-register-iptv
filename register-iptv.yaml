@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: register-iptv
+  namespace: middleware-activate-iptv
+  labels:
+    app: register-iptv
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: register-iptv
+  template:
+    metadata:
+      labels:
+        app: register-iptv
+    spec:
+      containers:
+        - name: register-iptv
+          image: swr.na-mexico-1.myhuaweicloud.com/cce-middleware-ms-soa/register-iptv-service:latest
+          envFrom:
+            - configMapRef:
+                name: activate-iptv-config
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 8081
+      imagePullSecrets:
+        - name: default-secret
+      hostNetwork: true
+      dnsPolicy: ClusterFirstWithHostNet
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: register-iptv
+  namespace: middleware-activate-iptv
+  labels:
+    app: register-iptv
+  annotations:
+    kubernetes.io/elb.class: union
+    kubernetes.io/elb.id: 3ae3d247-dc04-42c0-a468-a16aeb63e078
+    kubernetes.io/elb.lb-algorithm: ROUND_ROBIN
+    kubernetes.io/elb.health-check-flag: 'off'
+spec:
+  ports:
+    - port: 8081
+      targetPort: 8081
+      protocol: TCP
+  selector:
+    app: register-iptv
+  type: LoadBalancer
+  loadBalancerIP: 10.218.46.248
+  externalTrafficPolicy: Cluster
